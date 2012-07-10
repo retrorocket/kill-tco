@@ -1,11 +1,9 @@
 $("div[data-item-id]").live("mouseover", function(){
 	var $target = $(this).find("a.twitter-timeline-link");
-
 	$target.each(function() {
-
 		var str = $("span.js-display-url",this).text();
 		if(str != "" && str != null && str != undefined && str.match(/^http/) == null && $(this).attr("data-display-url") == undefined) {
-			var origin = str;
+			var origin = str + $("span.tco-ellipsis",this).text();
 			$(this).attr("data-display-url",origin);
 			//console.log(origin);
 		} else if ($(this).attr("data-display-url") == undefined && $(this).text().match(/^http/) == null) {
