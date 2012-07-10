@@ -1,6 +1,6 @@
 {
 	"name": "殲滅t.co",
-		"description": "t.coｺﾛｽ",
+		"description": "ブラウザでTwitterを表示する際にt.coを展開する拡張です",
 		"version": "1.0",
 		"permissions": [
 			"https://twitter.com/*", "http://twitter.com/*"
