@@ -1,0 +1,16 @@
+{
+	"name": "殲滅t.co",
+		"description": "t.coｺﾛｽ",
+		"version": "1.0",
+		"permissions": [
+			"https://twitter.com/*", "http://twitter.com/*"
+			],
+		"content_scripts": [
+		{
+			"matches":  ["https://twitter.com/*", "http://twitter.com/*"],
+			"js": ["jquery.js","script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
+
