@@ -11,10 +11,10 @@ $("div[data-item-id]").live("mouseover", function(){
 			$(this).attr("data-display-url",origin);
 			//console.log(origin);
 		}
-		if($(this).attr("data-ultimate-url")){
+		if($(this).attr("data-ultimate-url") != undefined){
 			$(this).attr("href", $(this).attr("data-ultimate-url"));
 			$(this).text($(this).attr("data-ultimate-url"));
-		} else if ( $(this).attr("data-expanded-url")) {
+		} else if ( $(this).attr("data-expanded-url") != undefined ) {
 			$(this).attr("href", $(this).attr("data-expanded-url"));
 			$(this).text($(this).attr("data-expanded-url"));
 		}
