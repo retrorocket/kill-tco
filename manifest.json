@@ -1,7 +1,7 @@
 {
 	"name": "殲滅t.co",
 		"description": "ブラウザでTwitterを表示する際にt.coを展開する拡張です",
-		"version": "1.3",
+		"version": "1.4",
 		"permissions": [
 			"https://twitter.com/*", "http://twitter.com/*"
 			],
