@@ -3,8 +3,8 @@ $("div[data-item-id]").live("mouseover", function(){
 	$target.each(function() {
 		var str = $("span.js-display-url",this).text();
 		var par  =  $(this).closest("div").hasClass("media");
-		//console.log(par);
-		if(str != "" && str != null && str != undefined && str.match(/^http/) == null && $(this).attr("data-display-url") == undefined && par  == false) {
+
+		if(str != "" && str != null && str != undefined && str.match(/^http/) == null && $(this).attr("data-display-url") == undefined && par == false && $(this).children().is("img")  == false) {
 			var origin = str + $("span.tco-ellipsis",this).text();
 			$(this).attr("data-display-url",origin);
 			//console.log(origin);
@@ -28,7 +28,7 @@ $("div[data-item-id]").live("mouseout", function(){
 	var $target = $(this).find("a.twitter-timeline-link");
 	$target.each(function() {
 		var par  =  $(this).closest("div").hasClass("media");
-		if($(this).attr("data-display-url") && par  == false){
+		if($(this).attr("data-display-url") && par  == false && $(this).children().is("img") == false){
 			$(this).text($(this).attr("data-display-url"));
 		}
 	});
